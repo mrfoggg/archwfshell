@@ -1,4 +1,4 @@
-sudo pacman -S micro bat btop alacritty make gtkmm3 gtk-layer-shell libdbusmenu-gtk3 glib2-devel
+sudo pacman -S micro bat btop alacritty fastfetch make gtkmm3 gtk-layer-shell libdbusmenu-gtk3 glib2-devel
 
 mkdir ~/installs-tmp
 cd ~/installs-tmp
