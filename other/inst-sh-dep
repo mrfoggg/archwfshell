@@ -1,1 +1,7 @@
-sudo pacman -S git meson python-pip pkgconf wayland autoconf libtool libffi libxml2 mesa libinput libxkbcommon pixman xorg-xutils xcb-proto python-xcbgen cairo glm libjpeg-turbo gtkmm3 xorg-xwayland libdrm gobject-introspection systemd polkit libx11 xcb-util-xinput xcb-util alsa-lib pulseaudio seatd vala libdbusmenu-gtk3 libxkbregistry libdisplay-info hwdata
+sudo pacman -S git meson python-pip pkgconf wayland autoconf libtool \
+  libffi libxml2 mesa libinput libxkbcommon pixman xorg-xutils xcb-proto \
+  python-xcbgen cairo glm libjpeg-turbo gtkmm3 xorg-xwayland libdrm \
+  gobject-introspection systemd polkit libx11 xcb-util-xinput xcb-util \
+  alsa-lib pulseaudio seatd vala libdbusmenu-gtk3 libxkbregistry \
+  libdisplay-info hwdata meson wayland wayland-protocols libinput \
+  wlroots glm boost xorg-apps
