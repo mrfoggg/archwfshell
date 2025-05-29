@@ -1,1 +1,1 @@
-sudo pacman -S vlr-randr geany chromium thunar
+sudo pacman -S wlr-randr geany chromium thunar
