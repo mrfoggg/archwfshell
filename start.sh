@@ -4,4 +4,4 @@ mkdir ~/installs-tmp
 cd ~/installs-tmp
 
 git clone https://aur.archlinux.org/yay.git && cd yay
-makepkg -si && cd ..
+makepkg -si && cd ~/archwfshell
