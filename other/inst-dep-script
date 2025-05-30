@@ -47,7 +47,7 @@ PACMAN_PACKAGES=(
   vulkan-icd-loader
   vulkan-intel
   glxinfo
-#  vulkan-radeon
+  vulkan-radeon
 )
 
 # Список пакетов для установки из AUR
