@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# Список пакетов для установки из официальных репозиториев
+PACMAN_PACKAGES=(
+  git
+  meson
+  ninja
+  python-pip
+  pkgconf
+  wayland
+  autoconf
+  libtool
+  libffi
+  libxml2
+  mesa
+  libinput
+  libxkbcommon  # Включает libxkbregistry
+  pixman
+  xorg-apps
+  xorg-xutils
+  xcb-proto
+  xorg-util-macros
+  python-xcbgen
+  cairo
+  glm
+  libjpeg-turbo
+  gtkmm3
+  xorg-xwayland
+  libdrm
+  gobject-introspection
+  systemd  # Включает systemd-libs
+  polkit
+  libx11  # Включает libx11-xcb
+  libxcb  # Включает xcb-util и xcb-util-xinput
+  alsa-lib  # Аналог libasound2
+  pulseaudio
+  seatd  # Включает libseat
+  vala
+  hwdata
+  wayland-protocols
+  wlroots
+  boost
+  openssh
+  fish
+  less
+)
+
+# Список пакетов для установки из AUR
+AUR_PACKAGES=(
+  libdbusmenu-gtk3
+  libdisplay-info
+)
+
+# Проверка и установка пакетов из официальных репозиториев
+for pkg in "${PACMAN_PACKAGES[@]}"; do
+  if ! pacman -Qs "$pkg" > /dev/null; then
+    echo "Установка пакета $pkg..."
+    sudo pacman -S --noconfirm "$pkg"
+  else
+    echo "Пакет $pkg уже установлен."
+  fi
+done
+
+# Проверка и установка пакетов из AUR с помощью yay
+for aur_pkg in "${AUR_PACKAGES[@]}"; do
+  if ! pacman -Qs "$aur_pkg" > /dev/null; then
+    echo "Установка пакета $aur_pkg из AUR..."
+    yay -S --noconfirm "$aur_pkg"
+  else
+    echo "Пакет $aur_pkg уже установлен."
+  fi
+done
