@@ -43,6 +43,11 @@ PACMAN_PACKAGES=(
   openssh
   fish
   less
+  vulkan-headers
+  vulkan-icd-loader
+  vulkan-intel
+  glxinfo
+#  vulkan-radeon
 )
 
 # Список пакетов для установки из AUR
